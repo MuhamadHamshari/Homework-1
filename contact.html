@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <style>
+      .flex-nav-bar {
+        background-color: black;
+        color: rgba(255, 255, 255, 0.92);
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 16px;
+      }
+      .flex-nav-bar a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      fieldset {
+        border-color: lightgray;
+      }
+      h1 {
+        text-align: center;
+      }
+      form {
+        width: 60%;
+        margin: auto;
+        background-color: white;
+        padding: 20px 10px;
+      }
+      body {
+        background-color: #d9d9d9;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-color">
+      <div class="flex-nav-bar">
+        <div class="flex-item-home"><a href="index.html">Home</a></div>
+        <div class="flex-item-hotel"><a href="hotel.html">Hotels</a></div>
+        <div class="flex-item-resturant">
+          <a href="restaurant.html">Restaurants</a>
+        </div>
+        <div class="flex-item-activities">
+          <a href="activ.html">Activities</a>
+        </div>
+        <div class="flex-item-sites">
+          <a href="sites.html">Cultural Sites</a>
+        </div>
+        <div class="flex-item-contact"><a href="contact.html">Contact</a></div>
+        <div class="flex-item-sitemap"><a href="sitemap.html">Site Map</a></div>
+      </div>
+      <h1>Visitor Feedback</h1>
+    </div>
+    <form action="https://oim-apis.up.railway.app/form2" method="POST">
+      <fieldset>
+        <legend><strong>Your Information:</strong></legend>
+        <br />
+        <div>
+          <label for="name-input">Name:</label>
+          <input
+            type="text"
+            placeholder="Enter your name here"
+            id="name-input"
+            name="name"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="email-input">Email:</label>
+          <input
+            type="text"
+            placeholder="Email"
+            id="email-input"
+            name="email"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="country">Which country are you visiting from?</label>
+          <input list="countries" id="my-country" name="my-country" />
+          <datalist id="countries">
+            <option value="United States"></option>
+            <option value="Canada"></option>
+            <option value="Jordan"></option>
+            <option value="China"></option>
+            <option value="Spain"></option>
+          </datalist>
+        </div>
+        <br />
+      </fieldset>
+      <fieldset>
+        <legend><strong>Your Review:</strong></legend>
+        <div>
+          Was this website useful?
+          <br />
+          <label for="review-input"
+            >Yes
+            <input type="radio" name="rating" value="yes" />
+          </label>
+          <label for="review-input"
+            >Somewhat
+            <input type="radio" name="rating" value="somewhat" />
+          </label>
+          <label for="review-input"
+            >No
+            <input type="radio" name="rating" value="no" />
+          </label>
+        </div>
+        <br />
+        <div>
+          <label for="site-visit"
+            >What was your favorite historical site? </label
+          ><select name="site" id="cultural-site">
+            <option value="petra">Petra</option>
+            <option value="jerash">Jerash</option>
+            <option value="wadi-rum">Wadi Rum</option>
+            <option value="dead-sea">Dead Sea</option>
+          </select>
+        </div>
+        <br />
+        <div>
+          <div>
+            <label for="comments">Comments:</label>
+          </div>
+          <div>
+            <textarea
+              name="comments"
+              id="comments"
+              cols="25"
+              rows="5"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+        </div>
+        <input type="checkbox" name="email-updates" value="Email" checked />
+        <label for="email-updates"> Sign me up for email updates</label>
+        <br /><br />
+        <input type="submit" />
+        <input type="reset" />
+      </fieldset>
+    </form>
+  </body>
+</html>

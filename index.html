@@ -4,249 +4,117 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Inconsolata"
-    />
-    <title>Homework 1</title>
-
+    <title>Home Page</title>
     <style>
-      img.A {
-        float: left;
-        border-style: solid;
-        border-width: 2px;
-        border-color: black;
-        padding-top: 5px;
-        padding-right: 5px;
-        padding-left: 5px;
-        padding-bottom: 5px;
-        margin-top: 20px;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        margin-left: 20px;
-      }
-      body {
-        background-image: url("Images/white-background.jpg");
-        background-color: darksalmon;
-        margin-left: 30px;
-        margin-right: 30px;
-      }
-      /*got clear: left; from w3schools*/
-      #hobbies {
-        clear: left;
-      }
-      img#mufc {
-        position: absolute;
-        left: 660px;
-        top: 700px;
-        margin-top: 20px;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        /*I used w3shcools again and found this interesting css property called "Opacity" which lets your control the transparency of the image*/
-        opacity: 0.7;
-      }
-      hr {
-        clear: left;
-      }
-      h1 {
-        text-align: center;
-        font-family: serif;
-      }
-      h2#hh {
-        font-family: Inconsolata;
-      }
-      h3 {
-        text-align: center;
-        font-family: cursive;
-      }
-      p.all {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.2em;
-        text-indent: 30px;
-      }
-      p#B {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.2em;
-      }
-      a {
-        text-decoration: none;
-        font-size: 1.1em;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      a.nav {
-        color: white;
-      }
       .flex-nav-bar {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: black;
+        color: rgba(255, 255, 255, 0.92);
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        color: rgba(255, 255, 255, 0.92);
         padding: 5px 16px;
+        animation-name: colorChange;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
       }
-      /*learned hover from w3schools*/
-      a:hover.nav {
-        /*color: rgba(255, 255, 255, 0.92);*/
-        background-color: transparent;
+
+      @keyframes colorChange {
+        0% {
+          background-color: black;
+        }
+        50% {
+          background-color: green;
+        }
+        100% {
+          background-color: red;
+        }
+      }
+
+      .flex-nav-bar a {
+        color: white;
+        font-weight: bold;
         text-decoration: none;
+        text-transform: uppercase;
       }
-      /*learned dropdown styling from w3schools*/
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #38444d;
+      #amman-home {
+        position: fixed;
+        right: 0;
+        bottom: auto;
+        min-width: 100%;
+        min-height: 80%;
       }
-
-      li {
-        float: left;
+      #sitemap {
+        align-items: center;
+        position: fixed;
+        bottom: 0;
       }
-
-      li.dropdown {
-        display: inline-block;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: coral;
-        min-width: 160px;
-        /*learned box shadow from w3schools*/
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+      .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: #fff;
       }
 
-      .dropdown-content a {
-        color: black;
-        padding: 10px 12px;
-        text-decoration: none;
+      .content h1 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .content p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      iframe {
+        width: 80vw;
+        height: 40vw;
         display: block;
-        text-align: left;
-      }
-
-      .dropdown-content a:hover {
-        background-color: #f1f1f1;
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: block;
-        /*this helps display the dropdown menu*/
-      }
-      .dropbtn {
-        color: rgba(255, 255, 255, 0.92);
-        background-color: transparent;
-        text-decoration: none;
+        margin: auto;
       }
     </style>
   </head>
   <body>
-    <!--Learned how to link and highlight subheadings through a youtube video "https://www.youtube.com/watch?v=DbUeJXfhWOg"-->
     <div class="flex-nav-bar">
-      <div class="flex-item-aboutme">
-        <a
-          href="http://127.0.0.1:5500/index.html#:~:text=Portfolio-,About%20Me,-My%20name%20is"
-          title="Go to About Me section"
-          class="nav"
-          >About Me</a
-        >
+      <div class="flex-item-home"><a href="index.html">Home</a></div>
+      <div class="flex-item-hotel"><a href="hotel.html">Hotels</a></div>
+      <div class="flex-item-restaurant">
+        <a href="restaurant.html">Restaurants</a>
       </div>
-      <div class="flex-item-myhobbied">
-        <a
-          href="http://127.0.0.1:5500/index.html#:~:text=a%20Masters%20Degree.-,My%20Hobbies,-My%20favorite%20sport"
-          title="Go to My Hobbies Section"
-          class="nav"
-          >My Hobbies</a
-        >
+      <div class="flex-item-activities">
+        <a href="activ.html">Activities</a>
       </div>
-      <div class="flex-item-contact">
-        <a
-          href="http://127.0.0.1:5500/index.html#:~:text=took%20some%20photos.-,Contact%20Information,-Muhamad%20Hamshari%0AOIM3690"
-          title="Go to Contact section"
-          class="nav"
-          >Contact</a
-        >
-      </div>
-      <div class="flex-item-portfolio">
-        <a
-          href="http://127.0.0.1:5500/index.html#:~:text=GitHub%0ALinkedIn%0AGmail-,Sitemap"
-          title="Go to Portfolio Section"
-          class="nav"
-          >Portfolio</a
-        >
-      </div>
-      <!--learned drop down menu feature from w3schools-->
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Homework 2</a>
-        <div class="dropdown-content">
-          <a href="hw2-1.html" class="nav">AirPods Table</a>
-          <a href="hw2-2.html" class="nav">AirPods Grid Table</a>
-          <a href="hw2-3.html" class="nav">Feedback Form</a>
-          <a href="hw2-4.html" class="nav">Apple Nav Bar</a>
-        </div>
-      </li>
-      <div class="flex-item-me">Muhamad Hamshari</div>
+      <div class="flex-item-sites"><a href="sites.html">Cultural Sites</a></div>
+      <div class="flex-item-contact"><a href="contact.html">Contact</a></div>
+      <div class="flex-item-sitemap"><a href="sitemap.html">Site Map</a></div>
     </div>
-
-    <h2 id="about-me">About Me</h2>
-    <p class="all">
-      My name is Muhamad Hamshari, I'm 20 years old and I am currently a Junior
-      at Babson College concentrating in Technology Entrepreneurship and
-      Economics. I am originally half Palestinian and half Lebanese but I was
-      born in Amman, Jordan and I have lived there all my life. In my spare
-      time, I like to watch soccer and hang out with friends.
-      <br />
-      <img src="Images/Selfie.JPG" height="300" class="A" />
-    </p>
-    <p class="all">
-      I chose to come to
-      <a href="https://www.babson.edu/">Babson College</a> because I was
-      attracted by the college's modern way of teaching, as well as I want to
-      own a business someday and Babson can help me achieve that. I was also
-      attracted by the international community at Babson which was one of their
-      main selling points when I toured Babson in my Junior year of high school.
-      When I graduate, I hope to find a job in the U.S and gain some experience.
-      After a couple of years of working, I plan to return to school and get a
-      Masters Degree.
-    </p>
-    <div id="hobbies">
-      <h2 id="hh">My Hobbies</h2>
-      <p class="all">
-        My favorite sport is <strong>footabll (soccer)</strong>, I love watching
-        and playing football. The team I support is
-        <em><a href="https://www.manutd.com/">Manchester United</a></em
-        >. Hopefully Erik Ten Hag keeps up the great form he's on and helps us
-        secure top 4 and at least one trophy. I have to disagree with Professor
-        Li because <strong>Cristiano Ronaldo</strong> is the
-        <strong>GOAT.</strong>
-        <img src="Images/DS-photo.jpg" height="300" class="A" />I recently met
-        Daniel Sturridge in a sports bar in Boston and we watched the England
-        vs. France match together. Unfortunately France won 2-1, but he took it
-        like a champ. After the game we chatted for a bit and he took some
-        photos.
+    <div>
+      <br>
+      <iframe src="video/amman.mp4" frameborder="0" title="Amman"></iframe>
+      <!--<video autoplay muted loop id="amman-home">
+        <source src="video/amman.mp4" type="video/mp4" />
+      </video>-->
+    </div>
+    <div class="content">
+      <h1>Welcome to Jordan</h1>
+      <p>
+        Welcome to Amman, the capital city of the Hashemite Kingdom of Jordan.
+        Amman is a fascinating blend of ancient and modern, with a rich history
+        that dates back over 2,000 years. This vibrant city boasts a range of
+        cultural sites, from the well-preserved Roman Amphitheatre to the
+        impressive Citadel, as well as modern attractions like world-class
+        restaurants and shopping districts. With its warm hospitality and unique
+        charm, Amman is a must-see destination for any traveler to the Middle
+        East.
         <br />
-        <img src="Images/manutd-logo.png" height="200" id="mufc" />
-        <!--I added an audio clip of Manchester United's theme song by reading about it in W3Schools, I created a new folder titles "Audio" then linked it to the page similarly to how you link an image-->
-        <audio src="Audio/Glory Glory Man United karaoke.mp3" controls></audio>
+        <br />
+        The purpose of this website is to guide you through your journey to
+        Jordan. With so much to offer from hotels to cultural sites, we want to
+        make sure you have the best experience you possibly can. Now your
+        journey begins!
       </p>
-      <hr />
     </div>
-    <h3>Contact Information</h3>
-    <p id="B">
-      Muhamad Hamshari
-      <br />
-      OIM3690-WebTech
-      <br />
-      <a href="https://github.com/MuhamadHamshari">GitHub</a>
-      <br />
-      <a href="www.linkedin.com/in/muhamad-hamshari-9357b0232">LinkedIn</a>
-      <br />
-      <!--got mailto from w3schools-->
-      <a href="mailto:mhamshari1@babson.edu">Gmail</a>
-      <br />
-      <br />
-      <a href="sitemap.html">Sitemap</a>
-    </p>
+    <br />
   </body>
 </html>

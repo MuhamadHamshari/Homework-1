@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurants</title>
+    <style>
+      .flex-nav-bar {
+        background-color: darkred;
+        color: rgba(255, 255, 255, 0.92);
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 16px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      .card {
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+        margin: 20px;
+        max-width: 300px;
+      }
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .card h2 {
+        font-size: 24px;
+        margin: 10px;
+      }
+      .card p {
+        font-size: 16px;
+        margin: 10px;
+        line-height: 1.5;
+      }
+      .card a {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .card a:hover {
+        background-color: #666;
+      }
+      #flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      body {
+        background-color: #d9d9d9;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-nav-bar">
+      <div class="flex-item-home"><a href="index.html">Home</a></div>
+      <div class="flex-item-hotel"><a href="hotel.html">Hotels</a></div>
+      <div class="flex-item-restaurant">
+        <a href="restaurant.html">Restaurants</a>
+      </div>
+      <div class="flex-item-activities">
+        <a href="activ.html">Activities</a>
+      </div>
+      <div class="flex-item-sites"><a href="sites.html">Cultural Sites</a></div>
+      <div class="flex-item-contact"><a href="contact.html">Contact</a></div>
+      <div class="flex-item-sitemap"><a href="sitemap.html">Site Map</a></div>
+    </div>
+    <h1>Amman Restaurant Guide</h1>
+    <div id="flex">
+      <div class="card">
+        <img src="images/fakhreldin.jpg" alt="Fakhreldin Restaurant" />
+        <h2>Fakhreldin</h2>
+        <p>Address: Taha Hussein St.</p>
+        <p>Cuisine: Lebanese Food</p>
+        <p>Price range: $$$</p>
+        <a href="http://fakhreldin.com">Visit Site</a>
+      </div>
+      <div class="card">
+        <img src="images/wild-jordan.jpg" alt="Wild Jordan" />
+        <h2>Wild Jordan</h2>
+        <p>Address: Othman Ben Affan St</p>
+        <p>Cuisine: Modern Jordanian</p>
+        <p>Price range: $$</p>
+        <a href="https://wildjordancenter.com">Visit Site</a>
+      </div>
+      <div class="card">
+        <img src="images/hashem-restaurant.jpg" alt="Hashem Restaurant" />
+        <h2>Hashem Restaurant</h2>
+        <p>Address: King Faisal Street</p>
+        <p>Cuisine: Jordanian</p>
+        <p>Price range: $</p>
+        <a href="https://hashemrestaurants.com/usa/en/">Visit Site</a>
+      </div>
+      <div class="card">
+        <img src="images/sufra.jpg" alt="Sufra Restaurant" />
+        <h2>Sufra</h2>
+        <p>Address: Sufra Restaurant, Al Rainbow St 26</p>
+        <p>Cuisine: Jordanian</p>
+        <p>Price range: $$</p>
+        <a href="http://www.romero-jordan.com/sufra.html">Visit Site</a>
+      </div>
+      <div class="card">
+        <img src="images/shams.jpg" alt="Shams Restaurant" />
+        <h2>Shams El Balad</h2>
+        <p>Address: Mu'Ath Bin Jabal Street 69</p>
+        <p>Cuisine: Jordanian</p>
+        <p>Price range: $$</p>
+        <a href="https://www.shamselbalad.com">Visit Site</a>
+      </div>
+      <div class="card">
+        <img src="images/habibah.jpg" alt="Habibah Sweets" />
+        <h2>Habibah Sweets</h2>
+        <p>Address: Marwan Madi Complex</p>
+        <p>Cuisine: Palestinian Dessert</p>
+        <p>Price range: $</p>
+        <a href="http://habibahsweets.com">Visit Site</a>
+      </div>
+    </div>
+  </body>
+</html>
