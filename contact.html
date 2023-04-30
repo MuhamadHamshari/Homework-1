@@ -104,7 +104,7 @@
     </div>
       <h1>Visitor Feedback</h1>
     </div>
-    <form action="https://oim-apis.up.railway.app/form2" method="POST">
+    <form action="https://oim-apis.up.railway.app/form2" method="POST" id="form"> <!---->
       <fieldset>
         <legend><strong>Your Information:</strong></legend>
         <br />
@@ -146,7 +146,7 @@
         <div>
           Was this website useful?
           <br />
-          <label for="review-input"
+          <label for="review-input" id="useful"
             >Yes
             <input type="radio" name="rating" value="yes" />
           </label>
@@ -161,7 +161,7 @@
         </div>
         <br />
         <div>
-          <label for="site-visit"
+          <label for="site-visit" id="site"
             >What was your favorite historical site? </label
           ><select name="site" id="cultural-site">
             <option value="petra">Petra</option>
@@ -188,9 +188,44 @@
         <input type="checkbox" name="email-updates" value="Email" checked />
         <label for="email-updates"> Sign me up for email updates</label>
         <br /><br />
-        <input type="submit" />
-        <input type="reset" />
+        <input type="submit" value="submit" id="submit"/>
+        <input type="reset" value="reset" id="reset"/>
       </fieldset>
     </form>
+    <script>
+      function validateForm() {
+        const name = document.querySelector('#name-input').value;
+        const email = document.querySelector('#email-input').value;
+        const country = document.querySelector('#my-country').value;
+        const useful = document.querySelector('#useful').value;
+        const comment = document.querySelector('#comments').value;
+        if (name == "") {
+          alert("Please enter your name.");
+          return false ;
+        } else if (isNaN(name) == false) {
+          alert("Please don't include numbers in your name");
+          return false;
+        }
+        if (email == "") {
+          alert("Please enter your email.");
+          return false;
+        }
+        if (country == ""){
+          alert("Please let us know where you're from")
+        }
+        if (useful == ""){
+          alert("Please let us how useful you found the website")
+        }
+        if (comment == ""){
+          alert("Please leave a comment")
+        }
+      }
+
+      const form = document.querySelector('#form');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault(); 
+        validateForm();
+      });
+    </script>
   </body>
 </html>
