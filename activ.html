@@ -28,12 +28,15 @@
         color: #ffc107;
       }
       h1 {
-        text-align: center;
+        align-items: left;
+        font-size: 50px;
+        font-family: "Times New Roman", Times, serif;
+        color: firebrick;
       }
       img {
         display: block;
         margin: 0 auto;
-        max-width: 80%;
+        max-width: 60%;
       }
       h3 {
         text-align: center;
@@ -42,7 +45,7 @@
         font-size: 18px;
         line-height: 1.5;
         margin: 0 auto;
-        max-width: 80%;
+        max-width: 60%;
         text-align: justify;
       }
       li.dropdown {
@@ -107,8 +110,9 @@
     </div>
     <h1>Activities</h1>
     <br />
+    <h3 id="maan">Visit Ma'in Hot Spring</h3>
     <img src="images/ma'an.jpg" alt="Ma'an Hot Spring" />
-    <h3>Visit Ma'in Hot Spring</h3>
+
     <p>
       Ma'In Hot Springs Resort & Spa is located 30 kilometers from the 'mosaic'
       city of Madaba and right of the corner of the Dead Sea. There you can find
@@ -120,8 +124,9 @@
       every now and then.
     </p>
     <br />
+    <h3 id="tours">Jeep and ATV Tours:</h3>
     <img src="images/jeep-tour-wadi-rum.jpg" alt="A Jeep Tour in Wadi Rum" />
-    <h3>Jeep and ATV Tours:</h3>
+
     <p>
       Wadi Rum is considered to be one of the most beautiful places on Earth for
       its sandy alien like landscape. It is often referred to as the place that
@@ -135,8 +140,9 @@
       preferences.
     </p>
     <br />
+    <h3 id="hiking">Hiking</h3>
     <img src="images/hiking.jpg" alt="Hiking in Wadi Mujib" />
-    <h3>Hiking</h3>
+
     <p>
       Hiking in Jordan is a captivating and rewarding activity that allows
       visitors to explore the country's diverse landscapes and natural wonders.
@@ -152,8 +158,9 @@
       ruins, and a profound sense of adventure.
     </p>
     <br />
+    <h3 id="aqaba">Activities in Aqaba</h3>
     <img src="images/aqaba.jpg" alt="Snorkeling in Aqaba" />
-    <h3>Activities in Aqaba</h3>
+
     <p>
       Aqaba, located on the shores of the Red Sea, offers a plethora of exciting
       activities for visitors to enjoy. As a coastal city, diving and snorkeling
@@ -170,8 +177,9 @@
       offers an array of activities that cater to every traveler's interests.
     </p>
     <br />
+    <h3 id="nightlife">Nightlife</h3>
     <img src="images/nightlife.jpg" alt="Zenith Restaurant Bar" />
-    <h3>Nightlife</h3>
+
     <p>
       Amman, the capital of Jordan, offers an exciting and vibrant nightlife
       scene that is a must-see for visitors. With a range of bars, clubs, and
@@ -184,5 +192,15 @@
       night away to the latest beats. With a mix of traditional and modern
       venues, Amman's nightlife is a unique and unforgettable experience.
     </p>
+    <script>
+      const body = document.querySelector("body");
+      const h1 = document.querySelector("h1");
+
+      h1.addEventListener("mouseover", () => {
+        h1.style.transform = "translateX(45%)";
+        h1.style.transition = "transform 1s ease";
+        body.style.backgroundColor = "pink";
+      });
+    </script>
   </body>
 </html>

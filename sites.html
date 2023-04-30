@@ -7,7 +7,7 @@
     <title>Cultural Sites</title>
     <style>
       body {
-        background-color: #f8f8f8;
+        /*background-color: beige;*/
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
@@ -28,21 +28,26 @@
         color: #ffc107;
       }
       h1 {
+        font-size: 50px;
         text-align: center;
+        /*text-indent: 10%;
+        color: burlywood;
+        font-family: "Times New Roman", Times, serif;*/
       }
       img {
         display: block;
         margin: 0 auto;
-        max-width: 80%;
+        max-width: 60%;
       }
       h3 {
         text-align: center;
+        font-size: 30px;
       }
       p {
         font-size: 18px;
         line-height: 1.5;
         margin: 0 auto;
-        max-width: 80%;
+        max-width: 60%;
         text-align: justify;
       }
       li.dropdown {
@@ -105,10 +110,9 @@
       <div class="flex-item-contact"><a href="contact.html">Contact</a></div>
       <div class="flex-item-sitemap"><a href="sitemap.html">Site Map</a></div>
     </div>
-    <h1>Cultural Sites</h1>
-    <br />
-    <img src="images/petra.jpg" alt="Al-Khazneh">
-    <h3>Petra</h3>
+    <h1>click me</h1>
+    <h3 id="petra">Petra</h3>
+    <img src="images/petra.jpg" alt="Al-Khazneh" />
     <p>
       One of the most famous cultural sites in Jordan, Petra is a historical and
       archaeological city carved into the rock in the southern part of Jordan.
@@ -119,8 +123,9 @@
       UNESCO World Heritage Site.
     </p>
     <br />
-    <img src="images/jerash.jpg" alt="The Citadel in Jerash">
-    <h3>Jerash</h3>
+    <h3 id="jerash">Jerash</h3>
+    <img src="images/jerash.jpg" alt="The Citadel in Jerash" />
+
     <p>
       Located in northern Jordan, Jerash is a well-preserved ancient city that
       dates back to the Roman Empire. The city was once a thriving center of
@@ -130,8 +135,9 @@
       considered one of the best examples of Roman urbanism outside of Italy.
     </p>
     <br />
-    <img src="images/Ajloun-Castle.jpeg" alt="The Castle Entrance">
-    <h3>Ajloun Castle</h3>
+    <h3 id="ajloun">Ajloun Castle</h3>
+    <img src="images/Ajloun-Castle.jpeg" alt="The Castle Entrance" />
+
     <p>
       Situated in the northwestern part of Jordan, Ajloun Castle is a
       12th-century Islamic castle that was built during the Crusades. The castle
@@ -142,8 +148,9 @@
       the surrounding countryside.
     </p>
     <br />
-    <img src="images/umm-qais.jpg" alt="Umm Qais Pillars">
-    <h3>Umm Qais</h3>
+    <h3 id="umm-qais">Umm Qais</h3>
+    <img src="images/umm-qais.jpg" alt="Umm Qais Pillars" />
+
     <p>
       Umm Qais is an ancient Greco-Roman city located in northern Jordan near
       the borders of Syria and Palestine. The city was once a thriving center of
@@ -154,8 +161,9 @@
       city's hilltop location.
     </p>
     <br />
-    <img src="images/madaba.jpg" alt="Mosaic Map of Ancient Madaba">
-    <h3>Madaba</h3>
+    <h3 id="madaba">Madaba</h3>
+    <img src="images/madaba.jpg" alt="Mosaic Map of Ancient Madaba" />
+
     <p>
       Located in central Jordan, Madaba is a small town known for its impressive
       Byzantine-era mosaics. The town's most famous mosaic is the Madaba Map,
@@ -165,5 +173,17 @@
       and the Church of St. George. Visitors can explore the town's rich history
       and culture by visiting its many museums and cultural sites.
     </p>
+    <script>
+      const h1 = document.querySelector("h1");
+      const body = document.querySelector("body");
+
+      h1.addEventListener("click", () => {
+        h1.style.color = "burlywood";
+        h1.style.textAlign = "left";
+        h1.style.textIndent = "10%";
+        h1.textContent = "Cultural Sites";
+        body.style.backgroundColor = "beige";
+      });
+    </script>
   </body>
 </html>
