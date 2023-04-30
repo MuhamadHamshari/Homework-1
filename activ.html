@@ -6,33 +6,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Activities</title>
     <style>
+      body {
+        background-color: #f8f8f8;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
       .flex-nav-bar {
+        background-color: #333;
+        color: white;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        color: rgba(255, 255, 255, 0.92);
-        padding: 5px 16px;
-        z-index: -1;
+        padding: 10px;
       }
-      a {
+      .flex-nav-bar a {
+        color: white;
+        text-decoration: none;
+      }
+      .flex-nav-bar a:hover {
+        color: #ffc107;
+      }
+      h1 {
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+      }
+      h3 {
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0 auto;
+        max-width: 80%;
+        text-align: justify;
+      }
+      li.dropdown {
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: coral;
+        min-width: 160px;
+        /*learned box shadow from w3schools*/
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
         color: black;
+        padding: 10px 12px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+        /*this helps display the dropdown menu*/
+      }
+      .dropbtn {
+        color: rgba(255, 255, 255, 0.92);
+        background-color: transparent;
         text-decoration: none;
       }
     </style>
   </head>
   <body>
     <div class="flex-nav-bar">
-        <div class="flex-item-home"><a href="index.html">Home</a></div>
-        <div class="flex-item-hotel"><a href="hotel.html">Hotels</a></div>
-        <div class="flex-item-restaurant">
-          <a href="restaurant.html">Restaurants</a>
+      <div class="flex-item-home"><a href="index.html">Home</a></div>
+      <div class="flex-item-hotel"><a href="hotel.html">Hotels</a></div>
+      <li class="dropdown">
+        <a href="restaurant.html" class="dropbtn">Restaurants</a>
+        <div class="dropdown-content">
+          <a href="resturant-fakhreldin.html" class="nav">Fakhreldin</a>
+          <a href="resturant-wildjordan.html" class="nav">Wild Jordan</a>
+          <a href="resturant-sufra.html" class="nav">Sufra</a>
+          <a href="resturant-shams.html" class="nav">Shams El Balad</a>
+          <a href="resturant-hashem.html" class="nav">Hashem</a>
+          <a href="resturant-habiba.html" class="nav">Habibah</a>
         </div>
-        <div class="flex-item-activities">
-          <a href="activ.html">Activities</a>
-        </div>
-        <div class="flex-item-sites"><a href="sites.html">Cultural Sites</a></div>
-        <div class="flex-item-contact"><a href="contact.html">Contact</a></div>
-        <div class="flex-item-sitemap"><a href="sitemap.html">Site Map</a></div>
+      </li>
+
+      <div class="flex-item-activities">
+        <a href="activ.html">Activities</a>
       </div>
+      <div class="flex-item-sites"><a href="sites.html">Cultural Sites</a></div>
+      <div class="flex-item-contact"><a href="contact.html">Contact</a></div>
+      <div class="flex-item-sitemap"><a href="sitemap.html">Site Map</a></div>
+    </div>
+    <h1>Activities</h1>
+    <br />
+    <img src="images/ma'an.jpg" alt="Ma'an Hot Spring" />
+    <h3>Visit Ma'in Hot Spring</h3>
+    <p>
+      Ma'In Hot Springs Resort & Spa is located 30 kilometers from the 'mosaic'
+      city of Madaba and right of the corner of the Dead Sea. There you can find
+      thermal pools, gushing waterfalls, and natural cave saunas of the Ma'in
+      hot springs, which are a historical testament to the power of natural
+      wellness. The bubbly waters, which contain large amounts of hydrogen
+      sulfide, reach temperatures of up to 60 degrees and feed straight into the
+      nearby Dead Sea, in fact, King Herod reportedly also came by for a soak
+      every now and then.
+    </p>
+    <br />
+    <img src="images/jeep-tour-wadi-rum.jpg" alt="A Jeep Tour in Wadi Rum" />
+    <h3>Jeep and ATV Tours:</h3>
+    <p>
+      Wadi Rum is considered to be one of the most beautiful places on Earth for
+      its sandy alien like landscape. It is often referred to as the place that
+      most resembles Mars, and for that reason, multiple movies like The
+      Martian, Aladdin, and Dune have been filmed here. That's why Jeep and ATV
+      tours are necessary in order to be fully immersed in this mesmerizing
+      region of Jordan. In fact, the most sought-after tours are done at night
+      when the temperature is cooler, and the stars shining so bright you can
+      even see planets with your naked eye. These tours can range from 1 hour to
+      full day tours so there are plenty of options to accommodate all
+      preferences.
+    </p>
+    <br />
+    <img src="images/hiking.jpg" alt="Hiking in Wadi Mujib" />
+    <h3>Hiking</h3>
+    <p>
+      Hiking in Jordan is a captivating and rewarding activity that allows
+      visitors to explore the country's diverse landscapes and natural wonders.
+      From the rugged canyons of Wadi Mujib to the breathtaking trails of Dana
+      Biosphere Reserve and the majestic mountains of Wadi Rum, Jordan offers a
+      wealth of hiking opportunities. Whether you're an experienced trekker or a
+      casual nature lover, Jordan has something for everyone. Hiking in Jordan
+      allows you to immerse yourself in the country's rich history, encounter
+      Bedouin culture, and witness stunning vistas along the way. The trails
+      range from challenging hikes that test your endurance to leisurely walks
+      that showcase the beauty of Jordan's deserts, mountains, and hidden gems.
+      With each step, you'll be rewarded with awe-inspiring landscapes, ancient
+      ruins, and a profound sense of adventure.
+    </p>
+    <br />
+    <img src="images/aqaba.jpg" alt="Snorkeling in Aqaba" />
+    <h3>Activities in Aqaba</h3>
+    <p>
+      Aqaba, located on the shores of the Red Sea, offers a plethora of exciting
+      activities for visitors to enjoy. As a coastal city, diving and snorkeling
+      in the crystal-clear waters is a must-do experience, allowing you to
+      explore vibrant coral reefs and encounter a diverse array of marine life.
+      For those seeking more adrenaline, Aqaba is renowned for its water sports,
+      such as jet skiing, windsurfing, and parasailing, providing thrilling
+      adventures on the waves. You can also take a relaxing boat cruise along
+      the coastline, enjoy sunbathing on the pristine beaches, or indulge in a
+      spa day at one of the luxurious resorts. Exploring Aqaba's rich history is
+      also fascinating, with attractions like the Aqaba Fort and the Aqaba
+      Archaeological Museum showcasing the city's cultural heritage. Whether
+      you're seeking adventure, relaxation, or cultural exploration, Aqaba
+      offers an array of activities that cater to every traveler's interests.
+    </p>
+    <br />
+    <img src="images/nightlife.jpg" alt="Zenith Restaurant Bar" />
+    <h3>Nightlife</h3>
+    <p>
+      Amman, the capital of Jordan, offers an exciting and vibrant nightlife
+      scene that is a must-see for visitors. With a range of bars, clubs, and
+      restaurants, there's something for everyone in the city. Start your
+      evening with a delicious meal at one of the many high-end restaurants that
+      serve traditional Jordanian cuisine or international dishes. Then, head to
+      one of the trendy bars, where you can enjoy a range of cocktails and
+      spirits while listening to live music or DJs. The city also has many
+      nightclubs that offer an energetic atmosphere, where you can dance the
+      night away to the latest beats. With a mix of traditional and modern
+      venues, Amman's nightlife is a unique and unforgettable experience.
+    </p>
   </body>
 </html>
