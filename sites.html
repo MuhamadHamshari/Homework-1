@@ -6,33 +6,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cultural Sites</title>
     <style>
+      body {
+        background-color: #f8f8f8;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
       .flex-nav-bar {
+        background-color: #333;
+        color: white;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        color: rgba(255, 255, 255, 0.92);
-        padding: 5px 16px;
-        z-index: -1;
+        padding: 10px;
       }
-      a {
+      .flex-nav-bar a {
+        color: white;
+        text-decoration: none;
+      }
+      .flex-nav-bar a:hover {
+        color: #ffc107;
+      }
+      h1 {
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+      }
+      h3 {
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0 auto;
+        max-width: 80%;
+        text-align: justify;
+      }
+      li.dropdown {
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: coral;
+        min-width: 160px;
+        /*learned box shadow from w3schools*/
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
         color: black;
+        padding: 10px 12px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+        /*this helps display the dropdown menu*/
+      }
+      .dropbtn {
+        color: rgba(255, 255, 255, 0.92);
+        background-color: transparent;
         text-decoration: none;
       }
     </style>
   </head>
   <body>
     <div class="flex-nav-bar">
-        <div class="flex-item-home"><a href="index.html">Home</a></div>
-        <div class="flex-item-hotel"><a href="hotel.html">Hotels</a></div>
-        <div class="flex-item-restaurant">
-          <a href="restaurant.html">Restaurants</a>
+      <div class="flex-item-home"><a href="index.html">Home</a></div>
+      <div class="flex-item-hotel"><a href="hotel.html">Hotels</a></div>
+      <li class="dropdown">
+        <a href="restaurant.html" class="dropbtn">Restaurants</a>
+        <div class="dropdown-content">
+          <a href="resturant-fakhreldin.html" class="nav">Fakhreldin</a>
+          <a href="resturant-wildjordan.html" class="nav">Wild Jordan</a>
+          <a href="resturant-sufra.html" class="nav">Sufra</a>
+          <a href="resturant-shams.html" class="nav">Shams El Balad</a>
+          <a href="resturant-hashem.html" class="nav">Hashem</a>
+          <a href="resturant-habiba.html" class="nav">Habibah</a>
         </div>
-        <div class="flex-item-activities">
-          <a href="activ.html">Activities</a>
-        </div>
-        <div class="flex-item-sites"><a href="sites.html">Cultural Sites</a></div>
-        <div class="flex-item-contact"><a href="contact.html">Contact</a></div>
-        <div class="flex-item-sitemap"><a href="sitemap.html">Site Map</a></div>
+      </li>
+
+      <div class="flex-item-activities">
+        <a href="activ.html">Activities</a>
       </div>
+      <div class="flex-item-sites"><a href="sites.html">Cultural Sites</a></div>
+      <div class="flex-item-contact"><a href="contact.html">Contact</a></div>
+      <div class="flex-item-sitemap"><a href="sitemap.html">Site Map</a></div>
+    </div>
+    <h1>Cultural Sites</h1>
+    <br />
+    <img src="images/petra.jpg" alt="Al-Khazneh">
+    <h3>Petra</h3>
+    <p>
+      One of the most famous cultural sites in Jordan, Petra is a historical and
+      archaeological city carved into the rock in the southern part of Jordan.
+      Petra was the capital of the Nabataean Kingdom during the 1st century BC
+      and was later abandoned and forgotten for centuries until rediscovered in
+      the 19th century. The site is known for its impressive architecture,
+      including the Treasury and the Monastery, and has been designated as a
+      UNESCO World Heritage Site.
+    </p>
+    <br />
+    <img src="images/jerash.jpg" alt="The Citadel in Jerash">
+    <h3>Jerash</h3>
+    <p>
+      Located in northern Jordan, Jerash is a well-preserved ancient city that
+      dates back to the Roman Empire. The city was once a thriving center of
+      trade and commerce, and many of its impressive ruins remain intact,
+      including the Temple of Artemis, the Oval Plaza, and the North Theater.
+      Jerash is one of the most important Roman sites in the Middle East and is
+      considered one of the best examples of Roman urbanism outside of Italy.
+    </p>
+    <br />
+    <img src="images/Ajloun-Castle.jpeg" alt="The Castle Entrance">
+    <h3>Ajloun Castle</h3>
+    <p>
+      Situated in the northwestern part of Jordan, Ajloun Castle is a
+      12th-century Islamic castle that was built during the Crusades. The castle
+      was strategically located on a hilltop to protect the region from invading
+      armies, and it played an important role in the defense of the area for
+      centuries. Today, the castle is a popular tourist attraction, and visitors
+      can explore its impressive architecture and take in the stunning views of
+      the surrounding countryside.
+    </p>
+    <br />
+    <img src="images/umm-qais.jpg" alt="Umm Qais Pillars">
+    <h3>Umm Qais</h3>
+    <p>
+      Umm Qais is an ancient Greco-Roman city located in northern Jordan near
+      the borders of Syria and Palestine. The city was once a thriving center of
+      culture and commerce, and it is believed to have been one of the ten
+      cities of the Decapolis. Umm Qais is home to a number of impressive ruins,
+      including a theater, a basilica, and a mausoleum. Visitors can also take
+      in stunning views of the Sea of Galilee and the Golan Heights from the
+      city's hilltop location.
+    </p>
+    <br />
+    <img src="images/madaba.jpg" alt="Mosaic Map of Ancient Madaba">
+    <h3>Madaba</h3>
+    <p>
+      Located in central Jordan, Madaba is a small town known for its impressive
+      Byzantine-era mosaics. The town's most famous mosaic is the Madaba Map,
+      which is a 6th-century map of the Holy Land that is believed to be the
+      oldest surviving map of the region. Madaba is also home to a number of
+      other impressive mosaics, including those in the Church of the Apostles
+      and the Church of St. George. Visitors can explore the town's rich history
+      and culture by visiting its many museums and cultural sites.
+    </p>
   </body>
 </html>

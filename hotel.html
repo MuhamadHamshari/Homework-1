@@ -7,28 +7,29 @@
     <title>Hotels</title>
     <style>
       body {
-        background-color:  #d9d9d9;
+        background-color: #d9d9d9;
         font-family: Arial, sans-serif;
         font-size: 16px;
         margin: 0;
         padding: 0;
       }
-      
+
       .flex-nav-bar {
-        background-color: green;
-        color: rgba(255, 255, 255, 0.92);
+        background-color: #333;
+        color: white;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        padding: 5px 16px;
+        padding: 10px;
       }
-      
       .flex-nav-bar a {
         color: white;
-        font-weight: bold;
         text-decoration: none;
-        text-transform: uppercase;
       }
-      
+      .flex-nav-bar a:hover {
+        color: #ffc107;
+      }
+
       h1 {
         color: black;
         font-size: 36px;
@@ -37,7 +38,7 @@
         text-align: center;
         text-transform: uppercase;
       }
-      
+
       h3 {
         color: black;
         font-size: 24px;
@@ -45,7 +46,7 @@
         margin: 0;
         text-align: center;
       }
-      
+
       .grid-container {
         display: grid;
         gap: 10px;
@@ -55,7 +56,7 @@
         overflow-x: auto;
         padding: 20px;
       }
-      
+
       .grid-item {
         background-color: white;
         border: 1px solid black;
@@ -64,7 +65,7 @@
         padding: 20px;
         text-align: center;
       }
-      
+
       .grid-item a {
         color: black;
         font-size: 20px;
@@ -72,13 +73,13 @@
         text-decoration: none;
         text-transform: uppercase;
       }
-      
+
       .grid-item img {
         border-radius: 5px;
         margin-bottom: 20px;
         max-width: 100%;
       }
-      
+
       .grid-item p {
         margin: 0;
       }
@@ -87,10 +88,45 @@
         padding-top: 56.25%;
         position: relative;
       }
-      
+
       iframe {
         height: 100px;
         width: 100%;
+      }
+      li.dropdown {
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: coral;
+        min-width: 160px;
+        /*learned box shadow from w3schools*/
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 10px 12px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+        /*this helps display the dropdown menu*/
+      }
+      .dropbtn {
+        color: rgba(255, 255, 255, 0.92);
+        background-color: transparent;
+        text-decoration: none;
       }
     </style>
   </head>
@@ -98,9 +134,18 @@
     <div class="flex-nav-bar">
       <div class="flex-item-home"><a href="index.html">Home</a></div>
       <div class="flex-item-hotel"><a href="hotel.html">Hotels</a></div>
-      <div class="flex-item-restaurant">
-        <a href="restaurant.html">Restaurants</a>
-      </div>
+      <li class="dropdown">
+        <a href="restaurant.html" class="dropbtn">Restaurants</a>
+        <div class="dropdown-content">
+          <a href="resturant-fakhreldin.html" class="nav">Fakhreldin</a>
+          <a href="resturant-wildjordan.html" class="nav">Wild Jordan</a>
+          <a href="resturant-sufra.html" class="nav">Sufra</a>
+          <a href="resturant-shams.html" class="nav">Shams El Balad</a>
+          <a href="resturant-hashem.html" class="nav">Hashem</a>
+          <a href="resturant-habiba.html" class="nav">Habibah</a>
+        </div>
+      </li>
+
       <div class="flex-item-activities">
         <a href="activ.html">Activities</a>
       </div>
@@ -108,76 +153,98 @@
       <div class="flex-item-contact"><a href="contact.html">Contact</a></div>
       <div class="flex-item-sitemap"><a href="sitemap.html">Site Map</a></div>
     </div>
-      <br />
-      <h1>Hotels In Amman</h1>
-      <h3>
-        Depending on your budget, these are some of the best hotels in Amman,
-        Jordan:
-      </h3>
-      <div class="grid-container">
-        <div class="grid-item">Luxury</div>
-        <div class="grid-item">Affordable</div>
-        <div class="grid-item">Budget</div>
-        <div class="grid-item">
-          <a
-            href="https://www.fourseasons.com/amman/?source=ppc|AMM|gaw|acr|RG|Brand.USA&ppc=true&gclid=Cj0KCQjwlPWgBhDHARIsAH2xdNfq9TPfk7CtqzijXhzl95PCWg99IomyzfQfG0OKo_Eeef1jtJEmoOMaAujTEALw_wcB&gclsrc=aw.ds"
-            >Four Seasons</a
-          >
-        </div>
-        <div class="grid-item">
-          <a href="https://www.genevahotel-amman.com">Geneva Hotel</a>
-        </div>
-        <div class="grid-item">
-          <a href="https://sites.google.com/view/kindi-suites-hotel/"
-            >Kindi Hotel</a
-          >
-        </div>
-        <div class="grid-item">
-          <img src="images/four-seasons.jpg" alt="Four Seasons Hotel" />
-          <p>Set atop the tallest of Amman's seven hills, within the leafy streets of the prestigious Abdoun residential area, our newly renovated hotel is a beacon of elegance in the center of the city and the first and only hotel in Jordan to receive the prestigious Forbes Five-Star rating. We invite you stay with us as you explore the historic sites of Petra and Wadi Rum or the storied waters of the Dead Sea, all within easy reach.</p>
-        </div>
-        <div class="grid-item">
-          <img src="images/geneva-hotel.jpg" alt="Geneva Hotel" />
-          <p>The Geneva Hotel - Amman is a four star family owned and operated hotel. The hotel cater to the corporate, diplomatic and tourist industry from all over the world. The hotel is a masterpiece of contemporary design and luxurious decor and furnishings. The hotel conveniently located on the main road to Q.A. International Airport. It is situated in West Amman a fast growing and modern business, diplomatic and shopping districts.</p>
-        </div>
-        <div class="grid-item">
-          <img src="images/kindi-suites-hotel.jpg" alt="Kindi Suite Hotel" />
-          <p>Kindi Suite Hotel is situated at the fifth circle in the heart of Amman, a 5-minute drive from areas such as Abdoun, Swefieyeh, and other shopping districts. The 3-star hotel offers comfortable rooms where they vary in size and type; however, each suite comes furnished with a private bathroom, air condition, a living room, plasma/TV satellite receiver, as well as a fully equipped kitchenette.</p>
-        </div>
-        <div class="grid-item">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.9728691153473!2d35.87884811481407!3d31.961632732418423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca05772da5d9d%3A0x80a84e21ae4f7d59!2sFour%20Seasons%20Hotel%20Amman!5e0!3m2!1sen!2sus!4v1679714748303!5m2!1sen!2sus"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div class="grid-item">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.9118960908863!2d35.85450041744385!3d31.963286799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca1091414b6c9%3A0x5c40c0ff05034649!2sGeneva%20Hotel%20Amman!5e0!3m2!1sen!2sus!4v1679714796473!5m2!1sen!2sus"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div class="grid-item">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.8061537829444!2d35.881270520219374!3d31.966155180945595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca05b1e1f2f0b%3A0x3184626b9c047bf8!2sKindi%20Suites%20Hotel!5e0!3m2!1sen!2sus!4v1679714825494!5m2!1sen!2sus"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+    <br />
+    <h1>Hotels In Amman</h1>
+    <h3>
+      Depending on your budget, these are some of the best hotels in Amman,
+      Jordan:
+    </h3>
+    <div class="grid-container">
+      <div class="grid-item">Luxury</div>
+      <div class="grid-item">Affordable</div>
+      <div class="grid-item">Budget</div>
+      <div class="grid-item">
+        <a
+          href="https://www.fourseasons.com/amman/?source=ppc|AMM|gaw|acr|RG|Brand.USA&ppc=true&gclid=Cj0KCQjwlPWgBhDHARIsAH2xdNfq9TPfk7CtqzijXhzl95PCWg99IomyzfQfG0OKo_Eeef1jtJEmoOMaAujTEALw_wcB&gclsrc=aw.ds"
+          >Four Seasons</a
+        >
       </div>
-    </body>
-  </html>
-  
+      <div class="grid-item">
+        <a href="https://www.genevahotel-amman.com">Geneva Hotel</a>
+      </div>
+      <div class="grid-item">
+        <a href="https://sites.google.com/view/kindi-suites-hotel/"
+          >Kindi Hotel</a
+        >
+      </div>
+      <div class="grid-item">
+        <img src="images/four-seasons.jpg" alt="Four Seasons Hotel" />
+        <p>
+          Set atop the tallest of Amman's seven hills, within the leafy streets
+          of the prestigious Abdoun residential area, our newly renovated hotel
+          is a beacon of elegance in the center of the city and the first and
+          only hotel in Jordan to receive the prestigious Forbes Five-Star
+          rating. We invite you stay with us as you explore the historic sites
+          of Petra and Wadi Rum or the storied waters of the Dead Sea, all
+          within easy reach.
+        </p>
+      </div>
+      <div class="grid-item">
+        <img src="images/geneva-hotel.jpg" alt="Geneva Hotel" />
+        <p>
+          The Geneva Hotel - Amman is a four star family owned and operated
+          hotel. The hotel cater to the corporate, diplomatic and tourist
+          industry from all over the world. The hotel is a masterpiece of
+          contemporary design and luxurious decor and furnishings. The hotel
+          conveniently located on the main road to Q.A. International Airport.
+          It is situated in West Amman a fast growing and modern business,
+          diplomatic and shopping districts.
+        </p>
+      </div>
+      <div class="grid-item">
+        <img src="images/kindi-suites-hotel.jpg" alt="Kindi Suite Hotel" />
+        <p>
+          Kindi Suite Hotel is situated at the fifth circle in the heart of
+          Amman, a 5-minute drive from areas such as Abdoun, Swefieyeh, and
+          other shopping districts. The 3-star hotel offers comfortable rooms
+          where they vary in size and type; however, each suite comes furnished
+          with a private bathroom, air condition, a living room, plasma/TV
+          satellite receiver, as well as a fully equipped kitchenette.
+        </p>
+      </div>
+      <div class="grid-item">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.9728691153473!2d35.87884811481407!3d31.961632732418423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca05772da5d9d%3A0x80a84e21ae4f7d59!2sFour%20Seasons%20Hotel%20Amman!5e0!3m2!1sen!2sus!4v1679714748303!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="grid-item">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.9118960908863!2d35.85450041744385!3d31.963286799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca1091414b6c9%3A0x5c40c0ff05034649!2sGeneva%20Hotel%20Amman!5e0!3m2!1sen!2sus!4v1679714796473!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="grid-item">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.8061537829444!2d35.881270520219374!3d31.966155180945595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca05b1e1f2f0b%3A0x3184626b9c047bf8!2sKindi%20Suites%20Hotel!5e0!3m2!1sen!2sus!4v1679714825494!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shams El Balad</title>
+    <link rel="stylesheet" href="style/resturant.css" />
+    <style>
+      .flex-nav-bar {
+        background-color: #333;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .flex-nav-bar a {
+        color: white;
+        text-decoration: none;
+      }
+      .flex-nav-bar a:hover {
+        color: #ffc107;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      li.dropdown {
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: coral;
+        min-width: 160px;
+        /*learned box shadow from w3schools*/
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 10px 12px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+        /*this helps display the dropdown menu*/
+      }
+      .dropbtn {
+        color: rgba(255, 255, 255, 0.92);
+        background-color: transparent;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-nav-bar">
+      <div class="flex-item-home"><a href="index.html">Home</a></div>
+      <div class="flex-item-hotel"><a href="hotel.html">Hotels</a></div>
+      <li class="dropdown">
+        <a href="restaurant.html" class="dropbtn">Restaurants</a>
+        <div class="dropdown-content">
+          <a href="resturant-fakhreldin.html" class="nav">Fakhreldin</a>
+          <a href="resturant-wildjordan.html" class="nav">Wild Jordan</a>
+          <a href="resturant-sufra.html" class="nav">Sufra</a>
+          <a href="resturant-shams.html" class="nav">Shams El Balad</a>
+          <a href="resturant-hashem.html" class="nav">Hashem</a>
+          <a href="resturant-habiba.html" class="nav">Habibah</a>
+        </div>
+      </li>
+
+      <div class="flex-item-activities">
+        <a href="activ.html">Activities</a>
+      </div>
+      <div class="flex-item-sites"><a href="sites.html">Cultural Sites</a></div>
+      <div class="flex-item-contact"><a href="contact.html">Contact</a></div>
+      <div class="flex-item-sitemap"><a href="sitemap.html">Site Map</a></div>
+    </div>
+    <h1>Shams El Balad</h1>
+    <img src="images/shams2jpg.jpg" alt="Shams Breakfast Spread" />
+    <p>
+      Shams El Balad is one of Amman's coolest eateries. Founded by married
+      couple Maha and Hazem Malhas as a small breakfast cafe serving dishes
+      rarely found outside of Jordanian home kitchens, Shams quickly
+      metamorphosed into a full-service restaurant, cultural space and concept
+      store after a rapid rise in notoriety. Inside the converted ancient villa,
+      local Jordanians meet here, chat and bond over great food and art. Dishes
+      here are freash, hearty, and simple, created by chef Qais Malhas, son of
+      the owners. Order a cup of the Shams chai, relax in its leafy courtyard,
+      and absorb the wealth of Jordanian culture that surrounds you.
+    </p>
+    <p>Visit the website <a href="https://www.shamselbalad.com">here</a></p>
+  </body>
+</html>
